@@ -1,12 +1,20 @@
 package singleton;
 
-public class singleton {
-    private static singleton ourInstance = new singleton();
+public class Singleton {
+    private String var = "teste";
+    private static Singleton singleton = new Singleton();
 
-    public static singleton getInstance() {
-        return ourInstance;
+    public void doSomething() {
+        System.out.println(var);
+    }
+    public String getSomething() {
+        return var;
     }
 
-    private singleton() {
+    public static Singleton getInstance() {
+        return singleton;
+    }
+
+    private Singleton() {
     }
 }
